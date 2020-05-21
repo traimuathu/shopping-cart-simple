@@ -1,0 +1,52 @@
+<header id="header"><!--header-->
+		
+  <div class="header-middle"><!--header-middle-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="logo pull-left">
+            <a href="/"><img src="/static/images/home/shop.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="shop-menu pull-right">
+            <ul class="nav navbar-nav">
+              <li><a href="/checkout"><i class="fa fa-shopping-cart"></i> Cart <% if(session.cart) { %>
+                <span>(<%= session.cart.totalQuantity %>)</span>
+              <% } %>  </a></li>
+              <% if(user) { %>
+                <li><a href="#"><i class="fa fa-user"></i> <%= user.username %> </a></li>
+                <li><a href="/user/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+              <% } else { %>
+                <li><a href="/user/login"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="/user/register"><i class="fa fa-plus" aria-hidden="true"></i> Register</a></li>
+              <% } %> 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/header-middle-->
+
+  <div class="header-bottom"><!--header-bottom-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="mainmenu pull-left">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+              <li><a href="">Trang chủ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</header>
